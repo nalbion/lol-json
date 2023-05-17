@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pip install -r requirements.txt
+
+if [[ $1 == '--convert' ]]; then
+  python3 lolpython.py --convert patients.lol
+elif [[ $1 == '--python' ]]; then
+    cat patients.lol | python3 lolpython.py --convert
+  else
+  python3 lolpython.py patients.lol
+fi
