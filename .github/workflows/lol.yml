@@ -13,4 +13,5 @@ jobs:
         python-version: "3.10"
     - name: Run the app
       run: |
-        ./run 
+        pip install -r requirements.txt
+        python3 lolpython.py patients.lol
